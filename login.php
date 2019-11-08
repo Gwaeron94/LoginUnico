@@ -2,6 +2,9 @@
     session_start();
     require 'config.php';
 
+    // Seta como vazio o valor da sessão quando é deslogado.
+    $_SESSION['lg'] = '';
+
     // Verifica se o email foi enviado pelo formulário e se ele não está vazio.
     if(isset($_POST['email']) && !empty($_POST['email'])) {
         // Email e senha são salvos.

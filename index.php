@@ -2,9 +2,6 @@
     session_start();
     require 'config.php';
 
-    // Seta como vazio o valor da sessão quando é deslogado.
-    $_SESSION['lg'] = '';
-    
     // Verifica se existe uma sessão logada.
     if(empty($_SESSION['lg'])) {
         header("Location: login.php");
